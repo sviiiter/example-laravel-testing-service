@@ -5,7 +5,9 @@
 
   class StrFormatter implements StrContract
   {
+
     public function format(string $s) {
-        return strtr($s, ['привет' => 'пока']);
+      return strtr($s, ['привет' => 'пока']);
     }
+
   }

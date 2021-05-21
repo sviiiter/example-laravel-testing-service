@@ -6,5 +6,7 @@
 
   interface StrContract
   {
+
     public function format(string $s);
+
   }

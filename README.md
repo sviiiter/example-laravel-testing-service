@@ -34,20 +34,20 @@ In your controller:
 
 ````php
 
-    namespace App\Http\Controllers;
+  namespace App\Http\Controllers;
 
 
-    use App\Services\StrReplaceService\StrContract;
-    use Illuminate\Routing\Pipeline;
+  use App\Services\StrReplaceService\StrContract;
+    
 
-    class IndexController extends Controller
-    {
+  class IndexController extends Controller
+  {
 
-        public function hi(Pipeline $pipeline, StrContract $t) {
-          return $t->format('привет тебе');
-        }
-
+    public function hi(StrContract $t) {
+      return $t->format('привет тебе');
     }
+
+  }
 
 ````
 

@@ -1,6 +1,6 @@
 # example-laravel-testing-service
 
-Simple Contract-Service-Provider bundle. Kinda help example described testing Laravel contract realization with Dependency Injection.
+Simple Contract-Service-Provider-Facade bundle. Kinda help example described testing Laravel contract realization with Dependency Injection.
 It contains example of CoR pattern using Pipeline into one of service class in addition.
 
 
@@ -38,13 +38,15 @@ In your controller:
 
 
   use App\Services\StrReplaceService\StrContract;
-    
+//  use App\Services\StrReplaceService\StrFormatterFacade;
+
 
   class IndexController extends Controller
   {
 
     public function hi(StrContract $t) {
       return $t->format('привет тебе');
+      // OR     return StrFormatterFacade::format('привет тебе');
     }
 
   }

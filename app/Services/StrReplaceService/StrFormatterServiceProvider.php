@@ -1,16 +1,18 @@
 <?php
 
-  namespace App\Services\StrReplaceService;
+  namespace Waste\Services\StrReplaceService;
 
   use Illuminate\Support\ServiceProvider;
+  use Waste\Services\StrReplaceService\Concretes\StrConverter;
+  use Waste\Services\StrReplaceService\Concretes\StrPipeConverter;
+  use Waste\Services\StrReplaceService\Contracts\StrContract;
 
   class StrFormatterServiceProvider extends ServiceProvider
   {
 
     public function register() {
-      /* @var ServiceProvider $this */
-//      $this->app->bind(StrContract::class, StrFormatter::class);
-      $this->app->bind(StrContract::class, StrTestFormatter::class);
+      $this->app->instance(StrContract::class, new StrConverter('see you down the road'));
+//      $this->app->bind(StrContract::class, StrPipeConverter::class);
     }
 
   }

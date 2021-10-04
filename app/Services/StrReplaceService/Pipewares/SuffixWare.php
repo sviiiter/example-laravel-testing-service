@@ -1,9 +1,9 @@
 <?php
 
-  namespace App\Services\StrReplaceService;
+  namespace Waste\Services\StrReplaceService\Pipewares;
 
 
-  class SecondMiddleWare
+  class SuffixWare
   {
 
     public function handle(string $content, \Closure $next) {

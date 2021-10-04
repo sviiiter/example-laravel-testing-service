@@ -1,7 +1,7 @@
 <?php
 
 
-  namespace App\Services\StrReplaceService;
+  namespace Waste\Services\StrReplaceService\Facades;
 
   use Illuminate\Support\Facades\Facade;
 

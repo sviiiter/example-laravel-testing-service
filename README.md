@@ -23,7 +23,7 @@ app/Services/StrReplaceService
 
 - Inject implementation by its contract into your service layer, [controller](app/Http/Controllers/IndexController.php) or whatever
 
-or get instance: (app)->make(StrContract::class);
+or get instance: app()->make(StrContract::class);
 
 
 

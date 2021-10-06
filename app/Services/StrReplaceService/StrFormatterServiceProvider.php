@@ -12,7 +12,7 @@
 
     public function register() {
       $this->app->instance(StrContract::class, new StrConverter('see you down the road'));
-//      $this->app->bind(StrContract::class, StrPipeConverter::class);
+//      $this->app->singleton(StrContract::class, StrPipeConverter::class);
     }
 
   }

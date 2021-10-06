@@ -1,10 +1,10 @@
 # example-laravel-testing-service
 
-Simple Contract-Service-Provider-Facade bundle. Kinda help example described testing Laravel contract realization with Dependency Injection.
-It contains example of CoR pattern using Pipeline into one of service class in addition.
+Self helper crib described simple Contract-Service-Provider-Facade bundle. Example of testing Laravel contract implementation addicted to test.
+Also, it contains example of CoR pattern using Pipeline.
 
 
-## Installation
+## Quick start
 
 - Create directory Services into your app folder 
 - Copy StrReplaceService directory with classes into Services folder(or clone it). Directory structure:
@@ -16,42 +16,15 @@ app/Services/StrReplaceService
 
 ```php
       'providers' => [
-        App\Services\StrReplaceService\StrFormatterServiceProvider::class,
+        Waste\Services\StrReplaceService\StrFormatterServiceProvider::class,
         // list of another providers
       ]
 ```
 
-- add route into routes.php or routes/web.php
+- Inject implementation by its contract into your service layer, [controller](app/Http/Controllers/IndexController.php) or whatever
 
-````php
-  Route::get('/hi', 'indexController@hi');
-````
+or get instance: (app)->make(StrContract::class);
 
-
-## Usage
-
-In your controller:
-
-````php
-
-  namespace App\Http\Controllers;
-
-
-  use App\Services\StrReplaceService\StrContract;
-//  use App\Services\StrReplaceService\StrFormatterFacade;
-
-
-  class IndexController extends Controller
-  {
-
-    public function hi(StrContract $t) {
-      return $t->format('привет тебе');
-      // OR     return StrFormatterFacade::format('привет тебе');
-    }
-
-  }
-
-````
 
 
 
